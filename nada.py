@@ -1,1 +1,1 @@
-asdf
+print("Nada")
