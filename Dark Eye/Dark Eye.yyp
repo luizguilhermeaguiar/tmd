@@ -34,11 +34,7 @@
   },
   "name":"Dark Eye",
   "resources":[
-    {"id":{"name":"obj_chao","path":"objects/obj_chao/obj_chao.yy",},},
-    {"id":{"name":"obj_jogador","path":"objects/obj_jogador/obj_jogador.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"id":{"name":"spr_chao","path":"sprites/spr_chao/spr_chao.yy",},},
-    {"id":{"name":"spr_jogador","path":"sprites/spr_jogador/spr_jogador.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
