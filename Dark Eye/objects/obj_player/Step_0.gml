@@ -38,7 +38,7 @@ y = y + vspd;
 //JUMP
 if place_meeting(x, y+1, obj_wall) and key_jump
 {
-vspd -= 10	
+vspd -= 12	
 	
 }
 #endregion
