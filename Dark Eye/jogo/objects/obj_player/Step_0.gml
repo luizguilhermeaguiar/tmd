@@ -2,6 +2,7 @@
 key_right = keyboard_check(ord("D")) //DIREITA
 key_left = keyboard_check(ord("A")) //ESQUERDA
 key_jump = keyboard_check(vk_space) // PULA
+key_shoot = keyboard_check
 #endregion
 
 #region movimentação
@@ -41,4 +42,10 @@ if place_meeting(x, y+1, obj_wall) and key_jump
 vspd -= 12	
 	
 }
+#endregion
+
+#region tiro
+
+
+
 #endregion
