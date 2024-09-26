@@ -45,7 +45,13 @@ vspd -= 12
 #endregion
 
 #region tiro
+var flipped = direction;
+var gun_x = (x+4)*(flipped)
+var _xx = x + lengthdir_x(-60,image_angle)
 
-
+if mouse_check_button_pressed(mb_left)
+{
+	
+}
 
 #endregion
