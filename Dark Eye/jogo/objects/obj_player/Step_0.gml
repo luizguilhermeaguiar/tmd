@@ -2,7 +2,7 @@
 key_right = keyboard_check(ord("D")) //DIREITA
 key_left = keyboard_check(ord("A")) //ESQUERDA
 key_jump = keyboard_check(vk_space) // PULA
-key_shoot = keyboard_check
+key_shoot = mouse_check_button(mb_left) // TIRO
 #endregion
 
 #region movimentação
@@ -39,7 +39,7 @@ y = y + vspd;
 //JUMP
 if place_meeting(x, y+1, obj_wall) and key_jump
 {
-vspd -= 12	
+vspd -= 12
 	
 }
 #endregion
@@ -47,11 +47,19 @@ vspd -= 12
 #region tiro
 var flipped = direction;
 var gun_x = (x+4)*(flipped)
-var _xx = x + lengthdir_x(-60,image_angle)
+var _xx = x + lengthdir_x(15,image_angle)
+var y_offset = x + lengthdir_y(-20,image_angle)
 
-if mouse_check_button_pressed(mb_left)
+if key_shoot and global.bullets > 0
 {
-	
+	with (instance_create_layer(_xx, y+10, "Shoot", obj_shot))
+	{
+		global.bullets--;
+		speed = 20; //VELOCIDADE DO TIRO
+		direction = -180 + 90 * other.image_xscale; // DIREÇÃO
+		image_angle = direction; //ANGULO
+	}
 }
+
 
 #endregion
