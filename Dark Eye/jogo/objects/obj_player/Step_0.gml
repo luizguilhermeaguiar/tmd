@@ -2,7 +2,7 @@
 key_right = keyboard_check(ord("D")) //DIREITA
 key_left = keyboard_check(ord("A")) //ESQUERDA
 key_jump = keyboard_check(vk_space) // PULA
-key_shoot = mouse_check_button(mb_left) // TIRO
+key_shoot = mouse_check_button_pressed(mb_left) // TIRO
 #endregion
 
 #region movimentação
@@ -56,7 +56,7 @@ if key_shoot and global.bullets > 0
 	{
 		global.bullets--;
 		speed = 20; //VELOCIDADE DO TIRO
-		direction = -180 + 90 * other.image_xscale; // DIREÇÃO
+		direction = -90 + 90 * other.image_xscale; // DIREÇÃO
 		image_angle = direction; //ANGULO
 	}
 }
